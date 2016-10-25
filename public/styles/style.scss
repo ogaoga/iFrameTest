@@ -1,0 +1,38 @@
+html, body, main, iframe {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  background: #eee;
+}
+    
+iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  transition-property: transform,width,height;
+  transition-duration: 1s;
+  transition-delay:    0.5s;  
+}
+
+.info {
+  opacity: 0;
+  transition: opacity 1s 1s;
+  margin: 10px auto;
+  text-align: center;
+  img {
+    margin: 0 auto;
+  }
+}
+
+.show {
+  $ratio: 0.7;
+  iframe {
+    transform: scale3d($ratio, $ratio, 1);
+  }
+  .info {
+    opacity: 1;
+  }
+}
